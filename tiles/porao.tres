@@ -1,6 +1,71 @@
 [gd_resource type="TileSet" format=3 uid="uid://cjv37r2ggyk7s"]
 
 [ext_resource type="Texture2D" uid="uid://bfmg46bdcy58e" path="res://sprites/porao_chao.png" id="1_hou0e"]
+[ext_resource type="Texture2D" uid="uid://dykg43iigf6yh" path="res://sprites/porao_moveis.png" id="1_t8dnq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjdok"]
+texture = ExtResource("1_t8dnq")
+10:4/size_in_atlas = Vector2i(3, 3)
+10:4/next_alternative_id = 3
+10:4/0 = 0
+10:4/1 = 1
+11:7/size_in_atlas = Vector2i(2, 3)
+11:7/0 = 0
+9:0/size_in_atlas = Vector2i(1, 2)
+9:0/0 = 0
+2:4/size_in_atlas = Vector2i(3, 3)
+2:4/0 = 0
+0:7/size_in_atlas = Vector2i(2, 3)
+0:7/0 = 0
+0:2/size_in_atlas = Vector2i(3, 2)
+0:2/0 = 0
+8:0/size_in_atlas = Vector2i(1, 2)
+8:0/0 = 0
+2:12/size_in_atlas = Vector2i(2, 4)
+2:12/0 = 0
+4:7/size_in_atlas = Vector2i(2, 3)
+4:7/0 = 0
+9:10/size_in_atlas = Vector2i(2, 2)
+9:10/0 = 0
+11:10/size_in_atlas = Vector2i(2, 2)
+11:10/0 = 0
+5:4/size_in_atlas = Vector2i(1, 3)
+5:4/0 = 0
+11:0/size_in_atlas = Vector2i(1, 2)
+11:0/0 = 0
+12:1/0 = 0
+10:0/size_in_atlas = Vector2i(1, 2)
+10:0/0 = 0
+0:12/size_in_atlas = Vector2i(2, 4)
+0:12/0 = 0
+1:10/size_in_atlas = Vector2i(4, 2)
+1:10/0 = 0
+2:7/size_in_atlas = Vector2i(1, 3)
+2:7/0 = 0
+6:7/size_in_atlas = Vector2i(1, 3)
+6:7/0 = 0
+3:7/size_in_atlas = Vector2i(1, 3)
+3:7/0 = 0
+8:2/size_in_atlas = Vector2i(2, 1)
+8:2/0 = 0
+7:2/size_in_atlas = Vector2i(1, 2)
+7:2/0 = 0
+5:0/size_in_atlas = Vector2i(1, 2)
+5:0/0 = 0
+6:0/size_in_atlas = Vector2i(1, 2)
+6:0/0 = 0
+7:0/size_in_atlas = Vector2i(1, 2)
+7:0/0 = 0
+3:2/size_in_atlas = Vector2i(2, 2)
+3:2/0 = 0
+5:2/size_in_atlas = Vector2i(2, 2)
+5:2/0 = 0
+10:2/size_in_atlas = Vector2i(3, 2)
+10:2/0 = 0
+0:4/size_in_atlas = Vector2i(2, 3)
+0:4/0 = 0
+5:10/size_in_atlas = Vector2i(4, 2)
+5:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hou0e"]
 texture = ExtResource("1_hou0e")
@@ -169,3 +234,4 @@ texture = ExtResource("1_hou0e")
 
 [resource]
 sources/2 = SubResource("TileSetAtlasSource_hou0e")
+sources/1 = SubResource("TileSetAtlasSource_fjdok")
