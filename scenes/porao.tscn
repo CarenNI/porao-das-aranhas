@@ -1,9 +1,13 @@
 [gd_scene format=4 uid="uid://pfie7a65ctcm"]
 
 [ext_resource type="TileSet" uid="uid://cjv37r2ggyk7s" path="res://tiles/porao.tres" id="1_3sq85"]
+[ext_resource type="Script" uid="uid://rcxd175mt5sf" path="res://scripts/porao.gd" id="1_5nh10"]
 [ext_resource type="PackedScene" uid="uid://dgubofuviyd26" path="res://entities/jogador.tscn" id="2_iebd6"]
+[ext_resource type="PackedScene" uid="uid://cgeup2sykslsy" path="res://entities/inimigo.tscn" id="3_5nh10"]
 
 [node name="Porao" type="Node2D" unique_id=2128207612]
+script = ExtResource("1_5nh10")
+cena_inimigo = ExtResource("3_5nh10")
 metadata/_edit_horizontal_guides_ = [7865.0]
 
 [node name="chao" type="TileMapLayer" parent="." unique_id=2026408858]
@@ -16,3 +20,23 @@ tile_set = ExtResource("1_3sq85")
 
 [node name="Jogador" parent="." unique_id=1339095115 instance=ExtResource("2_iebd6")]
 position = Vector2(320, 192)
+
+[node name="Nascedouros" type="Node2D" parent="." unique_id=1187802944]
+
+[node name="Esquerda" type="Marker2D" parent="Nascedouros" unique_id=1320169061]
+position = Vector2(20, 192)
+
+[node name="Direita" type="Marker2D" parent="Nascedouros" unique_id=1445415740]
+position = Vector2(630, 192)
+
+[node name="Cima" type="Marker2D" parent="Nascedouros" unique_id=1417290340]
+position = Vector2(330, 30)
+
+[node name="Baixo" type="Marker2D" parent="Nascedouros" unique_id=1314697775]
+position = Vector2(340, 360)
+
+[node name="Horda" type="Timer" parent="." unique_id=775200258]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Horda" to="." method="_on_horda_timeout"]
