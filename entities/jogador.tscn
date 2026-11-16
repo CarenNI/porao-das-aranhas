@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6wtti5sds56t" path="res://scripts/jogador.gd" id="1_mi7s2"]
 [ext_resource type="Texture2D" uid="uid://8r5e3254oany" path="res://sprites/personagem_andando.png" id="2_as3f3"]
+[ext_resource type="Texture2D" uid="uid://cbsmllwrrw03q" path="res://sprites/personagem_ataque.png" id="3_as3f3"]
 [ext_resource type="Texture2D" uid="uid://jp6gxc8m86po" path="res://sprites/personagem_parado.png" id="3_krsmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vv3b2"]
@@ -35,6 +36,46 @@ region = Rect2(288, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_byptf"]
 atlas = ExtResource("2_as3f3")
 region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krsmw"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nehf0"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk2l0"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raifr"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3prry"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6odg7"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtkv7"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0oxh"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgm5v"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwxv0"]
+atlas = ExtResource("3_as3f3")
+region = Rect2(432, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xet37"]
 atlas = ExtResource("3_krsmw")
@@ -89,6 +130,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_krsmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nehf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk2l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raifr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3prry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6odg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtkv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0oxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgm5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwxv0")
+}],
+"loop": 2,
+"name": &"atacar",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xet37")
 }, {
 "duration": 1.0,
@@ -114,15 +190,19 @@ size = Vector2(10, 6)
 [sub_resource type="CircleShape2D" id="CircleShape2D_wo4a7"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lul0q"]
+radius = 25.0
+
 [node name="Jogador" type="CharacterBody2D" unique_id=1339095115 groups=["player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_mi7s2")
+vida = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1145854783]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_wo4a7")
-animation = &"andando"
+animation = &"atacar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=344514536]
 position = Vector2(0, 13)
@@ -142,3 +222,19 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1606195226]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_wo4a7")
+
+[node name="Ataque" type="Area2D" parent="." unique_id=2091368901]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque" unique_id=1447658547]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_lul0q")
+
+[node name="Golpe" type="ColorRect" parent="Ataque" unique_id=90413923]
+visible = false
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 26.0
+color = Color(0.929151, 0.94760114, 0.9944598, 0.11764706)

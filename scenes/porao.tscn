@@ -48,7 +48,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="Relogio" type="Timer" parent="." unique_id=2111744855]
-wait_time = 60.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 
