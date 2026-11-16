@@ -4,6 +4,15 @@ extends Node2D
 @export var cena_inimigo: PackedScene
 
 @onready var horda: Timer = $Horda
+@onready var relogio: Timer = $Relogio
+@onready var jogador := $Jogador
+@onready var texto_vida: Label = $HUD/Vida
+@onready var texto_tempo: Label = $HUD/Tempo
+
+
+func _process(_delta: float) -> void:
+	texto_vida.text = "Vida: %d" % jogador.vida
+	texto_tempo.text = "Tempo: %d" % ceil(relogio.time_left)
 
 
 func _on_horda_timeout() -> void:
@@ -13,3 +22,16 @@ func _on_horda_timeout() -> void:
 
 	# A horda aperta: cada aranha chega um pouco mais cedo que a anterior.
 	horda.wait_time = max(0.5, horda.wait_time * 0.95)
+
+
+func _on_relogio_timeout() -> void:
+	vencer()
+
+
+# call_deferred: troca de cena só no fim do quadro, quando a física terminou.
+func vencer() -> void:
+	get_tree().change_scene_to_file.call_deferred("res://scenes/vitoria.tscn")
+
+
+func perder() -> void:
+	get_tree().change_scene_to_file.call_deferred("res://scenes/derrota.tscn")
