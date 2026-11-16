@@ -243,3 +243,9 @@ shape = SubResource("RectangleShape2D_wo4a7")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=588394455]
 path_desired_distance = 4.0
 target_desired_distance = 4.0
+
+[node name="Rota" type="Timer" parent="." unique_id=1961078096]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Rota" to="." method="_on_rota_timeout"]
