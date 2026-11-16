@@ -239,3 +239,7 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=465047391]
 position = Vector2(-0.3, 4.3)
 shape = SubResource("RectangleShape2D_wo4a7")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=588394455]
+path_desired_distance = 4.0
+target_desired_distance = 4.0
