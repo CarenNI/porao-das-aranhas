@@ -1,4 +1,8 @@
 # Porão das Aranhas
+![Captura do jogo](docs/captura1.png)
+
+**Jogue aqui:** https://carenni.itch.io/poro-das-aranhas
+
 
 Jogo do projeto de Jogos Digitais II (2026/2).
 

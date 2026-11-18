@@ -12,3 +12,9 @@ O que fiz: coloquei a arte do meu tema no lugar do boneco vermelho: o cenário C
 O que travou: medi o FPS com a horda cheia e ele ficou em 60 antes e depois, porque o Godot limita ao monitor, então não dava para ver diferença por ele. Não anotei os outros valores antes da mudança (apenas o FPS).
 
 Como resolvi: olhei o Physics Process no Debugger → Monitors: 0.20 ms com a horda cheia, depois de mais de 1 minuto de jogo. O jogo não travou em nenhum momento.
+
+## Aula 12 -- 11/11 (feita em 18/11)
+
+O que fiz: coloquei imagens de fundo nas telas de vitória e derrota, exportei o jogo para Windows (um .exe só, com Embed PCK) e publiquei a página do jogo no itch.io.
+O que travou: o download dos modelos de exportação pelo Godot falhou várias vezes; o git push foi recusado por um conflito no README.md; e o itch.io não deixava enviar o arquivo antes de confirmar o e-mail, nem marcar a página como Public antes de salvar.
+Como resolvi: baixei o arquivo .tpz pelo GitHub da Godot e instalei pelo "Install from File"; no Git, fiz o pull, escolhi o texto certo no README e apaguei as marcações do conflito; no itch.io, confirmei o e-mail, salvei a página como Draft e depois mudei para Public.
