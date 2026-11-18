@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dde5fjr2l2wb6"]
 
 [ext_resource type="Script" uid="uid://d2ko2v5wmw7y1" path="res://scripts/fim.gd" id="1_101bo"]
+[ext_resource type="Texture2D" uid="uid://b8vho3fmu7pop" path="res://sprites/fundo_derrota.png.png" id="2_78d6e"]
 
 [node name="Fim" type="Control" unique_id=1654122561]
 layout_mode = 3
@@ -10,6 +11,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_101bo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=495993960]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_78d6e")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Label" type="Label" parent="." unique_id=1295362344]
 layout_mode = 1
