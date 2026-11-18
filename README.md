@@ -25,5 +25,3 @@ Jogo do projeto de Jogos Digitais II (2026/2).
 
 * Código: baseado nos roteiros do Prof. Ezéfferth, com adaptações feitas com ajuda de IA (Claude)
 * Fundos das telas de fim: gerados com IA (Manus)
-
-
